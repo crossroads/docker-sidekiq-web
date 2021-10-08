@@ -19,11 +19,13 @@ Original Docker Hub Repo: https://hub.docker.com/r/aschzero/sidekiq-web/
 
 ## Simple Example
 
+
 ```
+docker build -t sidekiq-web .
 docker run \
   -p 3030:3030 \
   -e REDIS_URL=redis://host:6379 \
-  crossroads/sidekiq-web
+  sidekiq-web
 ```
 
 ## Docker Compose
