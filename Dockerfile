@@ -8,4 +8,4 @@ COPY config.ru .
 RUN gem install bundler:2.1.4 && bundle install
 RUN ruby -e "require 'securerandom'; File.open('.session.key', 'w') {|f| f.write(SecureRandom.hex(32)) }"
 
-CMD rackup config.ru -o 0.0.0.0 -p 3030 -q
+CMD rackup config.ru -o 0.0.0.0 -p 80 -q
