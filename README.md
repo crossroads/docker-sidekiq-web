@@ -33,7 +33,7 @@ Push `sidekiq-web:latest` or `sidekiq-web:production` to our Azure Container Reg
 ```
 docker build -t sidekiq-web .
 docker tag sidekiq-web <registry name>.azurecr.io/sidekiq-web:latest
-docker push <registry name>.azurecr.io/goodcity/sidekiq-web
+docker push <registry name>.azurecr.io/sidekiq-web
 ```
 
 ## Docker Compose
