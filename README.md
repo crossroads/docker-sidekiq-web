@@ -26,6 +26,16 @@ docker run \
 docker push <container registry> sidekiq-web:latest
 ```
 
+## Deployment
+
+Push `sidekiq-web:latest` or `sidekiq-web:production` to our Azure Container Registry in order to automatically deploy the app.
+
+```
+docker build -t sidekiq-web .
+docker tag sidekiq-web <registry name>.azurecr.io/sidekiq-web:latest
+docker push <registry name>.azurecr.io/goodcity/sidekiq-web
+```
+
 ## Docker Compose
 
 Example compose file:
@@ -34,7 +44,7 @@ Example compose file:
 version: '3'
 services:
   sidekiq_web:
-    image: crossroads/sidekiq-web
+    image: sidekiq-web
     environment:
       REDIS_URL: redis://host:6379
     ports:
