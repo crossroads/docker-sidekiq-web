@@ -28,13 +28,21 @@ docker push <container registry> sidekiq-web:latest
 
 ## Deployment
 
-Push `sidekiq-web:latest` or `sidekiq-web:production` to our Azure Container Registry in order to automatically deploy the app.
+Push `sidekiq-web:master` or `sidekiq-web:live` to our Azure Container Registry in order to automatically deploy the app.
 
 ```
 docker build -t sidekiq-web .
-docker tag sidekiq-web <registry name>.azurecr.io/sidekiq-web:latest
+docker tag sidekiq-web <registry name>.azurecr.io/sidekiq-web:master
 docker push <registry name>.azurecr.io/sidekiq-web
 ```
+
+Alternatively, use Azure Container Registry to build and deploy the image.
+
+```
+az login
+az acr build --registry <registry name> --image sidekiq-web:master .
+```
+
 
 ## Docker Compose
 
