@@ -23,7 +23,7 @@ docker run \
   -p 3030:80 \
   -e REDIS_URL=redis://host:6379 \
   sidekiq-web
-docker push <container registry> sidekiq-web:latest
+docker push <container registry> sidekiq-web:master
 ```
 
 ## Deployment
