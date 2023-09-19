@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'sidekiq', '~> 6.1'
-gem 'sinatra', '~> 2'
+gem 'sidekiq', '< 7'
+gem 'sinatra', '< 4'

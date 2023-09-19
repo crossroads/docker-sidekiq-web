@@ -8,7 +8,7 @@ version: 2.1
 # AZURE_ACR_REGISTRY - name of Azure Container Registry
 
 orbs:
-  azure-cli: circleci/azure-cli@1.2.0
+  azure-cli: circleci/azure-cli@1.2.2
 
 jobs:
   build-and-deploy-docker-image:
