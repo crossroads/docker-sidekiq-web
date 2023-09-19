@@ -12,7 +12,7 @@ orbs:
 
 jobs:
   build-and-deploy-docker-image:
-    executor: azure-cli/default
+    executor: azure-cli/azure-docker
     working_directory: ~/code
     steps:
       - checkout
