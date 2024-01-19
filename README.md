@@ -19,10 +19,7 @@ Original Docker Hub Repo: https://hub.docker.com/r/aschzero/sidekiq-web/
 
 ```
 docker build -t sidekiq-web .
-docker run \
-  -p 3030:80 \
-  -e REDIS_URL=redis://host:6379 \
-  sidekiq-web
+docker run -p 3030:3000 -e REDIS_URL=redis://172.17.0.4:6379/2 sidekiq-web
 docker push <container registry> sidekiq-web:master
 ```
 
